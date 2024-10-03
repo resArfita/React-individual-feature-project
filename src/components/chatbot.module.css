@@ -5,6 +5,12 @@
 
 }
 
-.pe {
-    margin: 30px;
+.pe{
+    margin: 5px 25px 25px;
+    color: #8c263b;
+}
+
+.welcome{
+    font-size: 20px;
+    margin-right: 50px;
 }
