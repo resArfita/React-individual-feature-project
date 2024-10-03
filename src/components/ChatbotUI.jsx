@@ -1,7 +1,6 @@
 import { useEffect } from "react"
-import styles from "./chatbot.module.css"
-import backIcon from "../assets/back-icon.png"
-import { Link } from "react-router-dom";
+import styles from "./playground.module.css"
+import Headings from "./Headings";
 
 const ChatbotUI = () => {
     useEffect(() => {
@@ -15,11 +14,7 @@ const ChatbotUI = () => {
     return(
         <>
         <div className="grid grid-rows-3">
-            <div className="flex justify-center items-center">
-                <Link to={"/playground"}><img src={backIcon} width={30} alt="" className={styles.welcome} /></Link>
-
-                <h1 className={styles.welcome}>Welcome!</h1>
-            </div>
+            <Headings to="/playground" heading="Welcome" />
             <div className={styles.pe}>
                 <p>Disini, bot <em>KawanConvo</em> akan menjadi partner belajar percakapan bahasa Inggris kamu</p>
                 <div>
