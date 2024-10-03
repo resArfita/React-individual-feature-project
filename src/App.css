@@ -44,3 +44,10 @@ h1{
   }
 }
 
+
+/*For the chatbot*/
+df-messenger {
+  --df-messenger-button-titlebar-color: var(--dark-primary);
+  --df-messenger-chat-background-color: #f5f5f5; 
+  --df-messenger-chat-bubble-background-color : var(--secondary-color)
+}
