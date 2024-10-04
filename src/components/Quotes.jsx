@@ -15,7 +15,7 @@ const Quotes = () => {
             const data = await response.json()
             setQuote(data[0])
         } catch (e) {
-            console.log(e)
+            console.log("Error during fetch", e)
         }
     }
 

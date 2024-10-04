@@ -73,6 +73,13 @@ h1{
 }
 
 
+/*Playground*/
+.pg{
+  font-weight: 600;
+  font-size: 20px;
+  padding-right: 15rem;
+}
+
 
 /*For the chatbot*/
 df-messenger {

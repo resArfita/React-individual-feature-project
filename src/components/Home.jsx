@@ -7,8 +7,8 @@ const Home = () => {
         <>
         <img src={logo} alt="" width={70} className="ml-2" />
         <div className="my-5 grid grid-rows-2">
-            <p className="ml-3"></p>
-            <h1 className="font-medium text-lg">Playground</h1> 
+            <p className="ml-3.5">Halo, </p>
+            <h1 className="pg mt-3">Playground</h1> 
         </div>
         <div className="border-2 border-white-500 shadow-md my-5 mx-3">
             <p className="ml-2 mt-2">Section ini memberikan kamu space untuk belajar dan mendapatkan informasi-informasi menarik dengan interaktif</p>
