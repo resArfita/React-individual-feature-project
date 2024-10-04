@@ -1,11 +1,22 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import logo from "../assets/logo.png"
 
 const Home = () => {
+
+    const navigate = useNavigate()
+
+    const logout = () => {
+        localStorage.removeItem("isAuthenticated")
+        alert("Anda akan login")
+        navigate("/login")
+    }
     
     return(
         <>
-        <img src={logo} alt="" width={70} className="ml-2" />
+        <div className="flex justify-space-between">
+            <img src={logo} alt="" width={70} className="ml-2" />
+            <button className="sm-btn-sec ml-60 mt-2" onClick={logout}>Logout</button>
+        </div>
         <div className="my-5 grid grid-rows-2">
             <p className="ml-3.5">Halo, </p>
             <h1 className="pg mt-3">Playground</h1> 
