@@ -18,7 +18,7 @@ const Playground = () => {
                 <div className="border-2 border-white-500 shadow-md m-2 py-5">
                     <div className="grid grid-cols-2">
                         <p className="mx-2">Motivation Booster</p>
-                        <Link to="/chatbot"><button className="sm-btn-primary ml-14">Open</button></Link>
+                        <Link to="/motivation"><button className="sm-btn-primary ml-14">Open</button></Link>
                     </div>   
                 </div>
             </div>
