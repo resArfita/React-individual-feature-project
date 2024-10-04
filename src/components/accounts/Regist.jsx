@@ -1,8 +1,25 @@
 import { Link } from "react-router-dom"
 import logo from "../../assets/logo.png"
 import "./Regist.css"
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 const Regist = () => {
+
+    const[email, setEmail] = useState("")
+    const[password, setPassword] = useState("")
+    const navigate = useNavigate()
+
+    const action = (e) => {
+        e.preventDefault()
+
+        localStorage.setItem("email", email)
+        localStorage.setItem("password", password)
+
+        alert("Registrasi berhasil")
+        navigate("/login")
+    }
+
     return(
         <>
         <div className="container mx-auto flex justify-center items-center min-h-screen p-4">
@@ -14,7 +31,7 @@ const Regist = () => {
                 <h1 className="text-3xl font-bold">Daftar Akun</h1>
                 <p className="p mt-3">Ruang Aman untuk Pemberdayaan dan Keadilan Perempuan</p>
               </div>
-              <form>
+              <form onSubmit={action}>
                     <div className="mb-4">
                       <label htmlFor="nama" className="label">Nama Lengkap</label>
                       <input
@@ -22,6 +39,7 @@ const Regist = () => {
                         id="nama"
                         placeholder="Nama Lengkap"
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                        required
                       />
                     </div>
                     <div className="flex gap-4 mb-4">
@@ -32,6 +50,7 @@ const Regist = () => {
                           id="gender"
                           placeholder="Jenis Kelamin"
                           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                          required
                         />
                       </div>
                       <div className="w-1/2">
@@ -40,6 +59,7 @@ const Regist = () => {
                           type="date"
                           id="ttl"
                           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                          required
                         />
                       </div>
                     </div>
@@ -50,6 +70,9 @@ const Regist = () => {
                         id="email"
                         placeholder="Email"
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
                       /></div>
                     <div className="mb-4">
                       <label htmlFor="password" className="label">Password</label>
@@ -58,6 +81,9 @@ const Regist = () => {
                         id="password"
                         placeholder="Password"
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
                       />
                     </div>
                     <div className="flex justify-center">
