@@ -46,6 +46,34 @@ h1{
 }
 
 
+/*Quotes styling*/
+.quotesSection{
+  background-color: rgba(10, 10, 10, 0.733);
+  padding: 10px 20px;
+  position: absolute;
+  color: white;
+  font-weight: 400;
+  top: 10rem;
+}
+
+.content{
+  margin: 4vh;
+}
+
+.btn3{
+  background-color: #8c263b;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 10vh;
+}
+
+.hq{
+  color: white;
+  font-weight: 600;
+}
+
+
+
 /*For the chatbot*/
 df-messenger {
   --df-messenger-button-titlebar-color: var(--dark-primary);
