@@ -3,6 +3,7 @@ import logo from "../assets/logo.png"
 
 const Home = () => {
 
+    //logout
     const navigate = useNavigate()
 
     const logout = () => {
