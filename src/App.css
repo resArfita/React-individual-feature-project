@@ -31,6 +31,21 @@
   cursor: pointer;
 }
 
+.sm-btn-sec{
+  display: inline-flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  border-radius: 10px;
+  background: var(--secondary-color);
+  color: var(--white);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
 h1{
   color: var(--primary-color);
   text-align: center;
