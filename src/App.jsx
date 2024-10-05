@@ -6,6 +6,7 @@ import MotivationBooster from './components/MotivationBooster'
 import Regist from './components/accounts/Regist'
 import Login from './components/accounts/Login'
 import './App.css'
+import ProtectedRoute from './components/ProdectedRoute'
 
 function App() {
 
@@ -15,9 +16,9 @@ function App() {
     <div className="wrapper-mobile">
       <Routes>
       <Route path="/" element={<Home />} />
-        <Route path="/playground" element={<Playground />} />
-        <Route path="/chatbot" element={<ChatbotUI />} />
-        <Route path="/motivation" element={<MotivationBooster />} />
+        <Route path="/playground" element={<ProtectedRoute><Playground /></ProtectedRoute>} />
+        <Route path="/chatbot" element={<ProtectedRoute><ChatbotUI /></ProtectedRoute>} />
+        <Route path="/motivation" element={<ProtectedRoute><MotivationBooster /></ProtectedRoute>} />
         <Route path="/regist" element={<Regist />} />
         <Route path="/login" element={<Login />} />
       </Routes>
